@@ -98,6 +98,20 @@ bash alpaca_evaluate.sh
 * **Temperature**: Top-H plays well with **higher T**; entropy constraint maintains coherence.
 * **Fallback**: In rare numerical edge cases selecting no tokens, fall back to argmax or include top-1.
 
+📎 Citation
+-----------
+
+If you use Top-H in your research, please cite:
+
+```bibtex
+@article{,
+  title   = {},
+  author  = {},
+  year    = {2025},
+  note    = {Preprint}
+}
+
+
 📫 Contact
 ----------
 
