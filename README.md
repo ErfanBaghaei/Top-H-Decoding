@@ -76,7 +76,7 @@ pip install -r requirements.txt
 bash alpaca_evaluate.sh
 ```
 
-📐 Method Details
+## 📐 Method Details
 -----------------
 
 * **ECMD** (conceptual): minimize divergence (e.g., JSD) between the model’s original distribution **p** and a truncated distribution **q**, under an entropy cap **H(q) ≤ α·H(p)**.
@@ -88,7 +88,7 @@ bash alpaca_evaluate.sh
 * **Adaptivity**: The threshold **α·H(p)** is **recomputed at each time step**, so Top-H loosens up when the model is uncertain and tightens when confident.
 
 
-🔧 Tuning & Tips
+## 🔧 Tuning & Tips
 ----------------
 
 * **α (entropy scale)**: primary knob.
@@ -98,7 +98,7 @@ bash alpaca_evaluate.sh
 * **Temperature**: Top-H plays well with **higher T**; entropy constraint maintains coherence.
 * **Fallback**: In rare numerical edge cases selecting no tokens, fall back to argmax or include top-1.
 
-📎 Citation
+## 📎 Citation
 -----------
 
 If you use Top-H in your research, please cite:
@@ -110,9 +110,10 @@ If you use Top-H in your research, please cite:
   year    = {2025},
   note    = {Preprint}
 }
+```
 
 
-📫 Contact
+## 📫 Contact
 ----------
 
 For questions or collaboration, reach out:
