@@ -12,9 +12,6 @@
 - [Key Features](#-key-features)
 - [Results Summary](#-results-summary)
 - [Installation](#-installation)
-- [Quickstart](#-quickstart)
-  - [Python API](#python-api)
-  - [CLI Usage](#cli-usage)
 - [Reproducing Paper Results](#-reproducing-paper-results)
 - [Method Details](#-method-details)
 - [Tuning & Tips](#-tuning--tips)
@@ -70,3 +67,16 @@ At a glance:
 git clone https://github.com/your-org/top-h-decoding.git
 cd top-h-decoding
 pip install -r requirements.txt
+```
+
+---
+
+## 🔬 Reproducing Paper Results
+
+Install dependencies, then run the evaluation script(s):
+
+```
+pip install -r requirements.txt
+bash alpaca_evaluate.sh
+```
+
