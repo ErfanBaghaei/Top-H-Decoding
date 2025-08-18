@@ -15,10 +15,6 @@
 - [Reproducing Paper Results](#-reproducing-paper-results)
 - [Method Details](#-method-details)
 - [Tuning & Tips](#-tuning--tips)
-- [Supported Models](#-supported-models)
-- [Roadmap](#-roadmap)
-- [Contributing](#-contributing)
-- [License](#-license)
 - [Citation](#-citation)
 - [Contact](#-contact)
 
