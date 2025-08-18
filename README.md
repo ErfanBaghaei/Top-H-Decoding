@@ -80,3 +80,34 @@ pip install -r requirements.txt
 bash alpaca_evaluate.sh
 ```
 
+📐 Method Details
+-----------------
+
+* **ECMD** (conceptual): minimize divergence (e.g., JSD) between the model’s original distribution **p** and a truncated distribution **q**, under an entropy cap **H(q) ≤ α·H(p)**.
+
+* **Equivalence**: ECMD ⇔ **ECMM** (maximize retained probability mass subject to the same entropy bound).
+
+* **Complexity**: ECMM is **NP-hard**; **Top-H** uses a **greedy** accumulation over sorted tokens, with a **stop rule** when adding the next token would exceed the entropy budget.
+
+* **Adaptivity**: The threshold **α·H(p)** is **recomputed at each time step**, so Top-H loosens up when the model is uncertain and tightens when confident.
+
+
+🔧 Tuning & Tips
+----------------
+
+* **α (entropy scale)**: primary knob.
+  * Lower α → **tighter**, more coherent, shorter candidate sets.
+  * Higher α → **looser**, more diverse, longer candidate sets.
+  * We commonly use **α ≈ 0.3–0.5**.
+* **Temperature**: Top-H plays well with **higher T**; entropy constraint maintains coherence.
+* **Fallback**: In rare numerical edge cases selecting no tokens, fall back to argmax or include top-1.
+
+📫 Contact
+----------
+
+For questions or collaboration, reach out:
+
+- **Erfan Baghaei Potraghloo** — [baghaeip@usc.edu](mailto:baghaeip@usc.edu)
+- **Seyedarmin Azizi** — [seyedarm@usc.edu](mailto:seyedarm@usc.edu)
+
+
