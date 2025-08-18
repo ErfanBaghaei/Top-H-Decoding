@@ -2,4 +2,4 @@
 *.json
 *.slurm
 __pycache__
-gpt4
+gpt4/
