@@ -118,7 +118,8 @@ If you use Top-H in your research, please cite:
 
 For questions or collaboration, reach out:
 
-- **Erfan Baghaei Potraghloo** — [baghaeip@usc.edu](mailto:baghaeip@usc.edu)
 - **Seyedarmin Azizi** — [seyedarm@usc.edu](mailto:seyedarm@usc.edu)
+- **Erfan Baghaei Potraghloo** — [baghaeip@usc.edu](mailto:baghaeip@usc.edu)
+
 
 
