@@ -1,0 +1,4 @@
+*.log
+*.json
+*.slurm
+__pycache__
