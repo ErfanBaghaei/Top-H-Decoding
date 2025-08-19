@@ -73,23 +73,28 @@ Install dependencies, then run the evaluation script(s):
 
 ```bash
 pip install -r requirements.txt
-bash alpaca_evaluate.sh
+```
 
-### Using LM Evaluation Harness
+### AlpacaEval
+```bash
+bash alpaca_evaluate.sh
+```
+### LM Evaluation Harness
 
 1. Clone the [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) repository:
    ```bash
    git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
    cd lm-evaluation-harness
    pip install -e .
-
+   ```
 2. Replace the huggingface.py file from this repo into the lm-evaluation-harness repo:
    ```bash
-  cp -f ./Top-H-Decoding/huggingface.py ./lm-evaluation-harness/lm_eval/models
+   cp -f ./Top-H-Decoding/huggingface.py ./lm-evaluation-harness/lm_eval/models
+   ```
 3. Run the evaluation script:
    ```bash
-  bash lm_evaluate.sh
-
+   bash lm_evaluate.sh
+   ```
 
 ## 📐 Method Details
 -----------------
