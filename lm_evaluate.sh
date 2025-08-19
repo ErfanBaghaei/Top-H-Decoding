@@ -4,4 +4,4 @@ python3 -u -m lm_eval --model hf \
   --device cuda:0 \
   --batch_size 1 \
   --num_fewshot 8 \
-  --gen_kwargs "top_p=1.0,temperature=2.0,do_sample=True"
+  --gen_kwargs "top_p=1.0,temperature=2.0,do_sample=True,alpha=0.4"
