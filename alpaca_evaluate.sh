@@ -7,7 +7,7 @@ python3 -u alpaca_generate.py \
   --temperature 2.0 \
   --top_p 0.9 \
   --do_sample \
-  --item_cap 5 \
-  --alpha 2.0
+  --item_cap 100 \
+  --alpha 0.4
 
 alpaca_eval --annotators_config 'gpt4' --model_outputs "$OUTPUT"
