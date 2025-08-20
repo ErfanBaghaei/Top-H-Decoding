@@ -61,7 +61,7 @@ At a glance:
 
 ```bash
 git clone https://github.com/your-org/top-h-decoding.git
-cd top-h-decoding
+cd Top-H-Decoding
 pip install -r requirements.txt
 ```
 
