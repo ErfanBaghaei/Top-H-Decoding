@@ -69,12 +69,6 @@ pip install -r requirements.txt
 
 ## 🔬 Reproducing Paper Results 
 
-Install dependencies, then run the evaluation script(s):
-
-```bash
-pip install -r requirements.txt
-```
-
 ### AlpacaEval
 ```bash
 bash alpaca_evaluate.sh
