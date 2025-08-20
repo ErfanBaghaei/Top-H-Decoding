@@ -1,4 +1,4 @@
-OUTPUT=./test.json
+OUTPUT=./teseet.json
 
 python3 -u alpaca_generate.py \
   --save_address "$OUTPUT" \
@@ -8,6 +8,6 @@ python3 -u alpaca_generate.py \
   --top_p 0.9 \
   --do_sample \
   --item_cap 5 \
-  --alpha 0.4
+  --alpha 2.0
 
 alpaca_eval --annotators_config 'gpt4' --model_outputs "$OUTPUT"

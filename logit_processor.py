@@ -6,6 +6,13 @@ from transformers import LogitsProcessor
 class TopH_LogitsProcessor(LogitsProcessor):
     def __init__(self, top_n = 100,temperature=1.0, alpha = 0.4):
         super().__init__()
+
+        # --- input checks ---
+        if temperature == 0:
+            raise ValueError("Temperature must be non-zero to perform Top-H decoding.")
+        if not (0 < alpha <= 1):
+            raise ValueError("alpha must be in the range (0, 1].")
+        
         self.top_n = top_n
         self.temperature = temperature
         self.coef = alpha

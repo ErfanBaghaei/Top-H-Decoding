@@ -118,6 +118,7 @@ def evaluate_models(
         top_p=top_p,
         do_sample=do_sample,
         item_cap=item_cap,
+        alpha=alpha
     )
     save_responses(save_address, responses, inputs, model_name)
 
