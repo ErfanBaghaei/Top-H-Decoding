@@ -90,6 +90,8 @@ bash alpaca_evaluate.sh
    bash lm_evaluate.sh
    ```
 
+## 🤖 Inference 
+
 ## 📐 Method Details
 -----------------
 
