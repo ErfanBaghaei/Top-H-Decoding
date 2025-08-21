@@ -99,7 +99,7 @@ class TopH_LogitsProcessor(LogitsProcessor):
 
         # --- entropy-based thresholding ---
         alpha = top_n_probs.sum()
-        tau = ((self.calculate_entropy(top_n_probs) - torch.log2(alpha)) * alpha - bias ) * self.coef 
+        tau = ((self.calculate_entropy(top_n_probs) - torch.log2(alpha)) * alpha) * self.coef 
 
         valid_indices = []
         ind = 1
