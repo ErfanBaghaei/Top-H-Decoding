@@ -131,7 +131,7 @@ output = model.generate(
 
 print("output:\n")
 print(tokenizer.decode(output[0], skip_special_tokens=True))
-
+```
 ## 📐 Method Details
 -----------------
 
