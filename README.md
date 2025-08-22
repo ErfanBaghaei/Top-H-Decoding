@@ -90,7 +90,47 @@ bash alpaca_evaluate.sh
    bash lm_evaluate.sh
    ```
 
-## 🤖 Inference 
+## 🤖 Inference with Top-H Decoding
+
+This section demonstrates how to perform inference using a **Top-H decoding strategy** with Hugging Face models.  
+You can easily create an instance of `TopH_LogitsProcessor` and pass it to `model.generate()`.
+
+### Example
+
+```python
+from logit_processor import *
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Choose your model
+model_name = "meta-llama/Llama-3.1-8B-Instruct"
+
+# Load model and tokenizer
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    device_map="auto",
+    torch_dtype="auto"
+)
+model.eval()
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+# Create Top-H logits processor
+lp = TopH_LogitsProcessor(temperature=0.3)
+
+# Define prompt
+prompt = """Write a creative story about time moving backwards."""
+input_ids = tokenizer(prompt, return_tensors="pt")["input_ids"].to(model.device)
+
+# Generate output
+output = model.generate(
+    input_ids=input_ids,
+    temperature=0.3,
+    logits_processor=[lp],   # inject custom processor
+    top_p=None,              # disable nucleus sampling
+    max_new_tokens=512
+)
+
+print("output:\n")
+print(tokenizer.decode(output[0], skip_special_tokens=True))
 
 ## 📐 Method Details
 -----------------
