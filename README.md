@@ -160,11 +160,13 @@ print(tokenizer.decode(output[0], skip_special_tokens=True))
 If you use Top-H in your research, please cite:
 
 ```bibtex
-@article{,
-  title   = {},
-  author  = {},
-  year    = {2025},
-  note    = {Preprint}
+@misc{potraghloo2025toph,
+    title={Top-H Decoding: Adapting the Creativity and Coherence with Bounded Entropy in Text Generation},
+    author={Erfan Baghaei Potraghloo and Seyedarmin Azizi and Souvik Kundu and Massoud Pedram},
+    year={2025},
+    eprint={2509.02510},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 ```
 
